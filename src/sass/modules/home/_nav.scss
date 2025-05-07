@@ -2,14 +2,17 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-.firstpartImg{
-    background-image: url(https://www.royalmansour.com/wp-content/uploads/2024/07/car1-La-Grande-Table-Marocaine.jpg);
+
+.firstpartImg {
+    background-image: url(../../../../public/images/image.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
+    ;
 }
-.scndpartImg{
+
+.scndpartImg {
     background-image: url(https://www.restomobilier.ma/wp-content/uploads/2023/05/chaises-et-tables-maroc.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,9 +20,21 @@ body {
     height: 100vh;
 }
 
+.firstpartImg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
 
-
-
+.top-bar,
+.navbar {
+    position: relative;
+    z-index: 1;
+}
 
 
 .top-bar {
@@ -28,7 +43,7 @@ body {
     align-items: center;
     padding: 5px 10vw;
     font-size: 14px;
-    color: #ddd;
+    color: white
 }
 
 .contact-info {
@@ -42,12 +57,12 @@ body {
 }
 
 .language-selector {
-    color: #ccc;
+    color: white
 }
 
 .language-selector span {
     margin: 0 3px;
-    color: #888;
+    color: gold
 }
 
 .top-bar {
@@ -55,7 +70,7 @@ body {
     justify-content: space-between;
     padding: 5px 30px;
     font-size: 12px;
-    background: #111;
+    background-color: transparent
 }
 
 .navbar {
@@ -76,13 +91,14 @@ body {
 .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #030303;
+    color: white
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    color: white;
 }
 
 .nav-links li {
@@ -91,7 +107,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #060606;
+    color: white;
     font-size: 14px;
     transition: 0.3s;
 }
@@ -138,7 +154,7 @@ body {
 .book-button {
     padding: 8px 18px;
     border: 1px solid #d4af37;
-    color: rgb(8, 8, 8);
+    color: white;
     text-decoration: none;
     border-radius: 20px;
     transition: 0.3s;
