@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10vw;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.contact-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 5px;
+  color: black;
+}
+
+.language-selector {
+  color: #ccc;
+}
+
+.language-selector span {
+  margin: 0 3px;
+  color: #888;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+  font-size: 12px;
+  background: #111;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #030303;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #060606;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.dropdown-menu,
+.deep-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #222;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.deep-dropdown:hover .deep-menu {
+  display: block;
+  left: 100%;
+  top: 0;
+}
+
+.dropdown-menu li,
+.deep-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a,
+.deep-menu li a {
+  color: #070606;
+  text-decoration: none;
+  display: block;
+}
+
+.book-button {
+  padding: 8px 18px;
+  border: 1px solid #d4af37;
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.book-button:hover {
+  background: #d4af37;
+  color: black;
+}
+
+/*# sourceMappingURL=app.css.map */
