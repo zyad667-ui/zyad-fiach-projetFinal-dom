@@ -75,3 +75,135 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // carousel
+
+
+
+
+// menu
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.menu-tab');
+    const items = document.querySelectorAll('.menu-item');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            
+            this.classList.add('active');
+
+            const category = this.getAttribute('data-category');
+
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+// menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const topBtn = document.querySelector('.top-btn');
+        
+        window.onscroll = function() {
+            topBtn.classList.toggle('visible', window.scrollY > 300);
+        };
+
+        topBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
