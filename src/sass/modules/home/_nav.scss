@@ -286,7 +286,7 @@ input::placeholder {
     }
 
     .nav-links {
-        position: absolute;
+        position: fixed;
         top: 0;
         width: 75%;
         flex-direction: column;
@@ -300,6 +300,7 @@ input::placeholder {
         display: none;
         border-radius: 15px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        z-index: 2;
     }
 
     .nav-links.show {
@@ -322,6 +323,7 @@ input::placeholder {
         align-items: center;
         background-color: rgba(0, 0, 0, 0.7);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
     }
 
     .book-button {
@@ -427,7 +429,7 @@ iframe,
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     position: relative;
     filter: none;
 }
@@ -469,6 +471,7 @@ iframe,
     padding: 20px 10vw;
     height: 100vh;
     z-index: 3;
+    gap: 5vw;
 }
 
 .about-content {
@@ -521,3 +524,54 @@ iframe,
 }
 
 // about...
+
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column-reverse;
+        padding: 0 ;
+        height: auto;
+        gap: 0;
+        margin: 0;
+        z-index: 0;
+    }
+
+    .about-content {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        ;padding: 0;
+    }
+
+    .about-image-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .about-content li {margin: 0;
+    padding: 0;}
+
+
+    .container-hero {
+        flex-direction: column;
+        padding: 0 5vw;
+        padding-top: 10vh;
+        height: auto;
+    }
+    .hero-content>h2 {
+        font-size: 30px;
+        font-weight: 700px;
+        margin: 0;
+    }
+    .div-bouton{
+        display: flex;
+    }
+    .div-bouton>a{
+        display: block;
+    }
+    .carsl>a{
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
