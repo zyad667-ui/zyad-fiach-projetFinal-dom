@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,24 +14,31 @@ body {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
-.scndpartImg {
-  background-image: url(https://www.restomobilier.ma/wp-content/uploads/2023/05/chaises-et-tables-maroc.webp);
+.about-bg {
+  background-image: url(../../../../public/images/about-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
-.firstpartImg .overlay {
+.firstpartImg .overlay,
+.about-bg .bloor {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
+  z-index: 1;
+}
+
+.content-h {
+  z-index: 2;
 }
 
 .top-bar,
@@ -71,18 +83,34 @@ body {
   background-color: transparent;
 }
 
+.top-bar {
+  color: white;
+}
+
+.top-bar .bi {
+  color: #cda45e;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 30px;
-  position: relative;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
 }
 
 .navbar {
-  position: relative;
+  position: sticky;
   z-index: 1;
 }
 
@@ -163,7 +191,25 @@ body {
   color: black;
 }
 
-/* Modale  style*/
+.div-bouton {
+  margin-top: 5vh;
+}
+
+.buton-hero {
+  padding: 8px 18px;
+  border: 1px solid #d4af37;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: 0.3s;
+  color: white;
+}
+
+.buton-hero:hover {
+  background: #d4af37;
+  color: black;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -216,6 +262,146 @@ input::placeholder {
   font-weight: bold;
   opacity: 0.5;
   color: white;
+}
+
+.burger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .nav-links {
+    position: absolute;
+    top: 0;
+    width: 75%;
+    flex-direction: column;
+    gap: 25px;
+    background: #29261f;
+    display: none;
+    padding: 40px 20px;
+    z-index: 1000;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .nav-links a {
+    font-size: 20px;
+    color: white;
+    align-items: start;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .book-button {
+    display: none;
+  }
+  .language-selector {
+    display: none;
+  }
+  .contact-info {
+    display: flex;
+    gap: 15vw;
+    align-items: center;
+    text-decoration: none;
+  }
+  .top-bar {
+    color: white;
+  }
+  .top-bar .bi {
+    color: #cda45e;
+  }
+  .top-bar a {
+    color: white;
+    text-decoration: none;
+  }
+  .top-bar a:hover {
+    text-decoration: underline;
+  }
+}
+.container-hero {
+  display: flex;
+  gap: 20vw;
+  padding: 0 10vw;
+  padding-top: 10vw;
+  height: 100vh;
+}
+
+.hero-content > h2 {
+  font-size: 50px;
+  font-weight: 700px;
+  margin: 0;
+  color: white;
+}
+
+.hero-content > h2 > span {
+  color: hsl(38, 64%, 70%);
+}
+
+.hero-content > h2 {
+  font-size: 50px;
+  font-weight: 700px;
+  margin: 0;
+}
+
+.carousel-item {
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-item.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+iframe,
+.carousel-item img {
+  width: 100%;
+  height: 340px;
+  border-radius: 10px;
+  border: none;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#carouselContainer {
+  display: block;
+  margin: 50px auto;
+  max-width: 80%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*# sourceMappingURL=app.css.map */
