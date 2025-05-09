@@ -1298,36 +1298,180 @@ button[type=submit]:hover {
     height: 350px;
   }
 }
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.site-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.site-footer-brand {
+  margin-bottom: 30px;
+  flex: 1 1 250px;
+}
+
+.site-footer-brand h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.site-footer-section {
+  margin-bottom: 30px;
+  flex: 1 1 200px;
+}
+
+.site-footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.site-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.site-footer-section ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-footer-section ul li a:hover {
+  color: #fff;
+}
+
+.site-address,
+.site-contact {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.site-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.site-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.site-social-icon:hover {
+  background-color: #333;
+}
+
+.site-newsletter {
+  flex: 1 1 300px;
+}
+
+.site-newsletter p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.site-newsletter-form {
+  display: flex;
+}
+
+.site-newsletter-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  border: none;
+  background-color: #111;
+  color: #fff;
+}
+
+.site-newsletter-button {
+  padding: 12px 20px;
+  background-color: #c9a86e;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.site-newsletter-button:hover {
+  background-color: #d8b781;
+}
+
+.site-copyright {
+  text-align: center;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.site-copyright a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.site-copyright a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .site-footer-container {
+    flex-direction: column;
+  }
+  .site-footer-section,
+  .site-footer-brand,
+  .site-newsletter {
+    flex: 1 1 100%;
+  }
+}
 .top-btn {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
-  background: #e67e22;
-  color: white;
-  border: 0;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  z-index: 1000;
   opacity: 0;
-  transition: opacity 0.3s, transform 0.2s;
-  z-index: 100;
-  display: grid;
-  place-items: center;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .top-btn.visible {
   opacity: 1;
-}
-
-.top-btn:hover {
-  background: #444;
-  transform: scale(1.05);
+  visibility: visible;
 }
 
 .top-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 /*# sourceMappingURL=app.css.map */

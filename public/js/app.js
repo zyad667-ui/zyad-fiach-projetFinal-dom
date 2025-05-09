@@ -289,17 +289,19 @@ images.forEach(image => {
 
 
 
+// Récupération du bouton
+const backToTopBtn = document.getElementById('backToTopBtn');
 
+// Affichage du bouton après défilement
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('visible');
+  } else {
+    backToTopBtn.classList.remove('visible');
+  }
+});
 
-const topBtn = document.querySelector('.top-btn');
-
-window.onscroll = function () {
-    topBtn.classList.toggle('visible', window.scrollY > 300);
-};
-
-topBtn.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
+// Remonter en haut en douceur
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
