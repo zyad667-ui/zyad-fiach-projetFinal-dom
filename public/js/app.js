@@ -83,19 +83,19 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.menu-tab');
     const items = document.querySelectorAll('.menu-item');
+    items.forEach(item => {
+        item.style.display = 'flex';
+    });
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function () {
-            
             tabs.forEach(t => t.classList.remove('active'));
-            
             this.classList.add('active');
-
             const category = this.getAttribute('data-category');
 
             items.forEach(item => {
                 if (category === 'all' || item.getAttribute('data-category') === category) {
-                    item.style.display = 'block';
+                    item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
                 }
@@ -196,14 +196,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 const topBtn = document.querySelector('.top-btn');
-        
-        window.onscroll = function() {
-            topBtn.classList.toggle('visible', window.scrollY > 300);
-        };
 
-        topBtn.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        };
+window.onscroll = function () {
+    topBtn.classList.toggle('visible', window.scrollY > 300);
+};
+
+topBtn.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
