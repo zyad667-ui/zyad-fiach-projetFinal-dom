@@ -216,7 +216,14 @@ showSlides(currentcaro);
 
 
 
+// gallery part
+let images = document.querySelectorALL('.gallery')
 
+images.forEach(image => {
+    image.addEventListener('click', () => {
+
+    });
+});
 
 
 

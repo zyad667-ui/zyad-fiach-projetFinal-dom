@@ -1189,12 +1189,12 @@ button[type="submit"]:hover {
 }
 
 .carousel-controls {
-   display: none;
+    display: none;
 }
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 7px) {
     #caro2 {
         flex-direction: column;
         align-items: center;
@@ -1213,9 +1213,157 @@ button[type="submit"]:hover {
 }
 
 
+#gallery {
+    padding: 50px 20px;
+    background-color: #0c0b09;
+}
+
+#gallery h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#gallery h1 {
+    font-size: 36px;
+    color: #c49b63;
+}
+
+.imagesgallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1px;
+}
+
+.imagesgallery img.gallery {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagesgallery img.gallery:hover {
+    transform: scale(1.03);
+    zoom: normal;
+}
 
 
 
+@media (max-width:768px) {
+  .imagesgallery{
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+  }
+
+}
+
+
+.team-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.team-header h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: hsl(30, 25%, 98%);
+    /* Gold color */
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.team-header h3:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background-color: #d4af37;
+    top: 50%;
+    right: -80px;
+}
+
+.team-header h1 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    /* Gold color */
+    font-weight: 300;
+}
+
+.chef-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.chef-card {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    align-items: center;
+}
+
+.chef-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.chef-card:hover .chef-image {
+    transform: scale(1.1);
+}
+
+.chef-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.chef-card:hover .chef-info {
+    transform: translateY(0);
+}
+
+.chef-info h4 {
+    color: #d4af37;
+    margin-bottom: 5px;
+}
+
+.chef-info p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chef-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .chef-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-header h1 {
+        font-size: 1.8rem;
+    }
+}
 
 
 
