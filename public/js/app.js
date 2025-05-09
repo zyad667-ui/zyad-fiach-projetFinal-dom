@@ -235,73 +235,120 @@ images.forEach(image => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    let autoSlideInterval;
 
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
 
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
 
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
 
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 3000);
+    }
 
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
 
+    nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
 
+    prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Récupération du bouton
-const backToTopBtn = document.getElementById('backToTopBtn');
-
-// Affichage du bouton après défilement
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add('visible');
-  } else {
-    backToTopBtn.classList.remove('visible');
-  }
+    showSlide(currentSlide);
+    startAutoSlide();
 });
 
-// Remonter en haut en douceur
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+    } else {
+        backToTopBtn.classList.remove('visible');
+    }
+});
+
 backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
