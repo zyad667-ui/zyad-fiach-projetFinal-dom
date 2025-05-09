@@ -110,7 +110,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// special
+// specials part 
+document.querySelectorAll('.specials-menu button').forEach((item) => {
+    item.addEventListener('click', () => {
+        document.querySelectorAll('.specials-menu button').forEach(btn => btn.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
 
+let modibutton = document.querySelector('#modi');
+let undebutton = document.querySelector('#unde');
+let pariabutton = document.querySelector('#paria');
+let nostbutton = document.querySelector('#nost');
+let iustobutton = document.querySelector('#iusto');
+
+let modi = document.querySelectorAll('.modi');
+let unde = document.querySelectorAll('.unde');
+let paria = document.querySelectorAll('.paria');
+let nost = document.querySelectorAll('.nost');
+let iusto = document.querySelectorAll('.iusto');
+
+modibutton.addEventListener('click', () => {
+    modi.forEach(item => item.style.display = "flex");
+    unde.forEach(item => item.style.display = "none");
+    paria.forEach(item => item.style.display = "none");
+    nost.forEach(item => item.style.display = "none");
+    iusto.forEach(item => item.style.display = "none");
+});
+
+undebutton.addEventListener('click', () => {
+    unde.forEach(item => item.style.display = "flex");
+    modi.forEach(item => item.style.display = "none");
+    paria.forEach(item => item.style.display = "none");
+    nost.forEach(item => item.style.display = "none");
+    iusto.forEach(item => item.style.display = "none");
+});
+
+pariabutton.addEventListener('click', () => {
+    paria.forEach(item => item.style.display = "flex");
+    modi.forEach(item => item.style.display = "none");
+    unde.forEach(item => item.style.display = "none");
+    nost.forEach(item => item.style.display = "none");
+    iusto.forEach(item => item.style.display = "none");
+});
+
+nostbutton.addEventListener('click', () => {
+    nost.forEach(item => item.style.display = "flex");
+    modi.forEach(item => item.style.display = "none");
+    unde.forEach(item => item.style.display = "none");
+    paria.forEach(item => item.style.display = "none");
+    iusto.forEach(item => item.style.display = "none");
+});
+
+iustobutton.addEventListener('click', () => {
+    iusto.forEach(item => item.style.display = "flex");
+    modi.forEach(item => item.style.display = "none");
+    unde.forEach(item => item.style.display = "none");
+    paria.forEach(item => item.style.display = "none");
+    nost.forEach(item => item.style.display = "none");
+});
+// special
 
 
 
