@@ -35,7 +35,6 @@ burger.addEventListener("click", function () {
 // javascript respo
 
 
-
 // carousel
 
 document.addEventListener("DOMContentLoaded", function () {
