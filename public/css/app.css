@@ -901,7 +901,7 @@ body {
   object-fit: cover;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .specials {
     padding: 40px 20px;
   }
@@ -1011,6 +1011,104 @@ button[type=submit]:hover {
   color: #000;
 }
 
+.testimonials h4 {
+  color: gray;
+  padding: 0 40px;
+  margin: 0;
+}
+
+.testimonials h1 {
+  color: #b2914a;
+  padding: 0 40px;
+  margin: 0;
+}
+
+#caro2 {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.testimonial-card {
+  max-width: 400px;
+  background-color: transparent;
+  text-align: left;
+  display: none;
+  flex-direction: column;
+}
+
+.quote-box {
+  background-color: #111;
+  padding: 20px 30px;
+  border-radius: 8px;
+  position: relative;
+  font-style: italic;
+  color: #ccc;
+}
+
+.quote-mark {
+  font-size: 32px;
+  color: #b2914a;
+  font-style: normal;
+}
+
+.quote-mark.start {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.quote-mark.end {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.profile {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #111;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.profile-info p {
+  margin: 2px 0 0;
+  color: #999;
+}
+
+.carousel-controls {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #caro2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .testimonial-card {
+    width: 90%;
+  }
+  .testimonials h1,
+  .testimonials h4 {
+    padding: 0 20px;
+    text-align: center;
+  }
+}
 .top-btn {
   position: fixed;
   right: 30px;
